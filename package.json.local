@@ -25,5 +25,8 @@
     "glitch",
     "express",
     "react"
-  ]
+  ],
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  }
 }
