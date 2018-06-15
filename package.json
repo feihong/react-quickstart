@@ -7,8 +7,15 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "express": "^4.16.3",
-    "jsx-loader": "^0.13.2",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "@material-ui/core": "^1.2.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "webpack": "^4.12.0",
@@ -18,7 +25,20 @@
     "build": "webpack",
     "start": "webpack && node server.js",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn build -w\" \"yarn server\""
+    "dev": "concurrently --kill-others-on-fail \"yarn build -w --mode development\" \"yarn server\""
+  },
+  "babel": {
+    "presets": [
+      [
+        "env", {
+          "targets": {
+            "browsers": ["last 2 Chrome versions"]
+          }
+        }
+      ],
+      "react",
+      "stage-2"
+    ]
   },
   "keywords": [
     "node",

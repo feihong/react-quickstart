@@ -23,6 +23,7 @@ Run tests
 ## Sources
 
 - [starter-react on Glitch](https://glitch.com/~starter-react)
+- [The Minimal React + Webpack 4 + Babel Setup](https://www.robinwieruch.de/minimal-react-webpack-babel-setup/)
 - [How to get create-react-app to work with a Node.js back-end API](https://medium.freecodecamp.org/how-to-make-create-react-app-work-with-a-node-backend-api-7c5c48acb1b0)
 
 ## Links
