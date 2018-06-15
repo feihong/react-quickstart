@@ -8,13 +8,13 @@ Run in dev mode
 
     yarn dev
 
-Start the server
-
-    yarn start
-
 Build the client app
 
     yarn build
+
+Start the server (only used on Glitch)
+
+    yarn start
 
 Run tests
 
@@ -31,3 +31,7 @@ Run tests
 - https://github.com/facebook/create-react-app
 - https://support.glitch.com/t/create-react-app-support/1295/13
 - https://glitch.com/~create-react-app-demo
+
+## Notes
+
+I configured `babel-preset-env` to target "last 2 Chrome versions" because then it won't try to transform code that uses the new async syntax. This means that the compiled `bundle.js` won't run in very old browsers.
