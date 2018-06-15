@@ -2,7 +2,7 @@ import axios from 'axios'
 import React from 'react'
 import Button from '@material-ui/core/Button'
 
-class RandomHanzi extends React.Component {
+export default class RandomHanzi extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -30,5 +30,3 @@ class RandomHanzi extends React.Component {
     </div>
   }
 }
-
-module.exports = RandomHanzi
