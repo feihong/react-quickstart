@@ -31,6 +31,7 @@ Run tests
 - https://github.com/facebook/create-react-app
 - https://support.glitch.com/t/create-react-app-support/1295/13
 - https://glitch.com/~create-react-app-demo
+- [Material Design Icons](https://material.io/tools/icons/?style=baseline)
 
 ## Notes
 

@@ -6,6 +6,7 @@
     "node": "10.x"
   },
   "dependencies": {
+    "@material-ui/icons": "^1.1.0",
     "axios": "^0.18.0",
     "express": "^4.16.3"
   },
@@ -30,9 +31,12 @@
   "babel": {
     "presets": [
       [
-        "env", {
+        "env",
+        {
           "targets": {
-            "browsers": ["last 2 Chrome versions"]
+            "browsers": [
+              "last 2 Chrome versions"
+            ]
           }
         }
       ],
