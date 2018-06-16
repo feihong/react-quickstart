@@ -8,6 +8,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
+import FlipMove from 'react-flip-move'
 
 const options = [
   'Kowtow',
@@ -22,8 +23,10 @@ export default class ListDemo extends React.Component {
     this.state = {
       items: ['朱元璋', '朱允炆', '朱棣', '朱高炽', '朱瞻基'],
       anchorEl: null,
+      addIndex: 1,
     }
     this.removeOne = this.removeOne.bind(this)
+    this.addOne = this.addOne.bind(this)
     this.openMenu = this.openMenu.bind(this)
     this.closeMenu = this.closeMenu.bind(this)
   }
@@ -38,6 +41,14 @@ export default class ListDemo extends React.Component {
 
   removeOne() {
     this.setState({items: this.state.items.slice(1)})
+  }
+
+  addOne() {
+    let newItem = `Winnie the Pooh ${this.state.addIndex}`
+    this.setState({
+      items: [...this.state.items, newItem],
+      addIndex: this.state.addIndex + 1,
+    })
   }
 
   render() {
@@ -65,8 +76,11 @@ export default class ListDemo extends React.Component {
         )}
       </Menu>
       <Button onClick={this.removeOne}>Remove one</Button>
+      <Button onClick={this.addOne}>Add one</Button>
       <List>
-        {items}
+        <FlipMove>
+          {items}
+        </FlipMove>
       </List>
     </div>
   }
