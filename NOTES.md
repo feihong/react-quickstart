@@ -15,4 +15,4 @@
 
 ## About the Babel settings
 
-I configured `babel-preset-env` to target "last 2 Chrome versions" because then it won't try to transform code that uses the new async syntax. This means that the compiled `bundle.js` won't run in very old browsers.
+I configured `babel-preset-env` to target "last 2 Chrome versions" because then it won't try to transform code that uses the new async/await syntax. This simplifies the Babel configuration a little bit, but it implies that the compiled `public/bundle.js` won't run in very old browsers.
