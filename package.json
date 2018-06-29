@@ -1,7 +1,7 @@
 {
   "name": "hello-react",
   "version": "0.1.0",
-  "private": true,
+  "license": "Apache",
   "engines": {
     "node": "10.x"
   },
@@ -24,8 +24,8 @@
     "webpack-cli": "^3.0.6"
   },
   "scripts": {
-    "build": "webpack",
     "start": "webpack && node server.js",
+    "build": "webpack",    
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn build -w --mode development\" \"yarn server\""
   },
@@ -49,6 +49,7 @@
     "node",
     "glitch",
     "express",
-    "react"
+    "react",
+    "babel"
   ]
 }

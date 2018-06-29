@@ -11,7 +11,7 @@ import MenuItem from '@material-ui/core/MenuItem'
 import FlipMove from 'react-flip-move'
 
 const options = [
-  'Kowtow',
+  'Kneel',
   'Send Tribute',
   'Overthrow',
   'Assassinate',
@@ -21,7 +21,7 @@ export default class ListDemo extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      items: ['朱元璋', '朱允炆', '朱棣', '朱高炽', '朱瞻基'],
+      items: ['King Arther', 'Napoleon', 'Bowser', '朱元璋', 'The Burger King'],
       anchorEl: null,
       addIndex: 1,
     }
@@ -44,7 +44,7 @@ export default class ListDemo extends React.Component {
   }
 
   addOne() {
-    let newItem = `Winnie the Pooh ${this.state.addIndex}`
+    let newItem = `Henry ${this.state.addIndex}`
     this.setState({
       items: [...this.state.items, newItem],
       addIndex: this.state.addIndex + 1,
@@ -75,8 +75,10 @@ export default class ListDemo extends React.Component {
           </MenuItem>
         )}
       </Menu>
-      <Button onClick={this.removeOne}>Remove one</Button>
-      <Button onClick={this.addOne}>Add one</Button>
+      <Button variant='outlined' color='primary'
+              onClick={this.addOne}>Add one</Button>
+      <Button variant='outlined' color='secondary'
+              onClick={this.removeOne}>Remove one</Button>
       <List>
         <FlipMove>
           {items}
