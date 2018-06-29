@@ -14,7 +14,11 @@ import { withStyles } from '@material-ui/core/styles'
 const styles = theme => ({
   button: {
     marginRight: theme.spacing.unit
-  }
+  },
+  title: {
+    ...theme.typography.subheading,
+    marginBottom: 1.5 * theme.spacing.unit
+  },
 })
 
 const options = [
@@ -73,6 +77,7 @@ class ListDemo extends React.Component {
       </ListItem>)
 
     return <div>
+      <div className={classes.title}>List of Kings Demo</div>
       <Menu
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}

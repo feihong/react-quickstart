@@ -6,7 +6,8 @@ import { withStyles } from '@material-ui/core/styles'
 const styles = theme => ({
   hanzi: {
     fontSize: 3.5 * theme.typography.fontSize
-  }
+  },
+  title: theme.typography.subheading,
 })
 
 class RandomHanzi extends React.Component {
@@ -31,7 +32,7 @@ class RandomHanzi extends React.Component {
   render() {
     const {classes} = this.props
     return <div>
-      <div>Random Hanzi Generator</div>
+      <div className={classes.title}>Random Hanzi Generator</div>
       <div className={classes.hanzi}>{this.state.hanzi}</div>
       <Button variant='contained' color='primary'
               onClick={this.retrieveHanzi}>Generate</Button>
