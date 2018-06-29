@@ -9,6 +9,13 @@ import Button from '@material-ui/core/Button'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import FlipMove from 'react-flip-move'
+import { withStyles } from '@material-ui/core/styles'
+
+const styles = theme => ({
+  button: {
+    marginRight: theme.spacing.unit
+  }
+})
 
 const options = [
   'Kneel',
@@ -17,11 +24,11 @@ const options = [
   'Assassinate',
 ]
 
-export default class ListDemo extends React.Component {
+class ListDemo extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      items: ['King Arther', 'Napoleon', 'Bowser', '朱元璋', 'The Burger King'],
+      items: ['King Arther', 'Napoleon', 'Bowser', 'The Burger King'],
       anchorEl: null,
       addIndex: 1,
     }
@@ -53,6 +60,7 @@ export default class ListDemo extends React.Component {
 
   render() {
     const {anchorEl} = this.state
+    const {classes} = this.props
 
     const items = this.state.items.map(name =>
       <ListItem key={name} button>
@@ -75,7 +83,7 @@ export default class ListDemo extends React.Component {
           </MenuItem>
         )}
       </Menu>
-      <Button variant='outlined' color='primary'
+      <Button variant='outlined' color='primary' className={classes.button}
               onClick={this.addOne}>Add one</Button>
       <Button variant='outlined' color='secondary'
               onClick={this.removeOne}>Remove one</Button>
@@ -87,3 +95,5 @@ export default class ListDemo extends React.Component {
     </div>
   }
 }
+
+export default withStyles(styles)(ListDemo)
