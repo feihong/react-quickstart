@@ -11,19 +11,15 @@ const styles = theme => ({
 })
 
 class RandomHanzi extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      hanzi: '囧'
-    }
-    this.retrieveHanzi = this.retrieveHanzi.bind(this);
+  state = {
+    hanzi: '囧'
   }
 
   componentDidMount() {
     this.retrieveHanzi()
   }
 
-  async retrieveHanzi() {
+  retrieveHanzi = async () => {
     let data = (await axios.get('/hanzi')).data
     console.log(data)
     this.setState({hanzi: data.text})
