@@ -29,32 +29,25 @@ const options = [
 ]
 
 class ListDemo extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      items: ['King Arther', 'Napoleon', 'Bowser', 'The Burger King'],
-      anchorEl: null,
-      addIndex: 1,
-    }
-    this.removeOne = this.removeOne.bind(this)
-    this.addOne = this.addOne.bind(this)
-    this.openMenu = this.openMenu.bind(this)
-    this.closeMenu = this.closeMenu.bind(this)
+  state = {
+    items: ['King Arther', 'Napoleon', 'Bowser', 'The Burger King'],
+    anchorEl: null,
+    addIndex: 1,
   }
 
-  openMenu(evt) {
+  openMenu = (evt) => {
     this.setState({anchorEl: evt.currentTarget})
   }
 
-  closeMenu() {
+  closeMenu = () => {
     this.setState({anchorEl: null})
   }
 
-  removeOne() {
+  removeOne = () => {
     this.setState({items: this.state.items.slice(1)})
   }
 
-  addOne() {
+  addOne = () => {
     let newItem = `Henry ${this.state.addIndex}`
     this.setState({
       items: [...this.state.items, newItem],
