@@ -1,16 +1,15 @@
 const express = require('express')
 const app = express()
 
+// Serve files inside the public directory
 app.use(express.static('public'))
 
+// Return a number between min and max (inclusive)
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-app.get('/', (req, res) => {
-  res.sendFile('./public/index.html')
-})
-
+// Respond with a random hanzi as JSON
 app.get('/hanzi', (req, res) => {
   let ord = getRandomInt(0x4e00, 0x9fff)
   res.status(200).json({

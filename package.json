@@ -25,9 +25,9 @@
   },
   "scripts": {
     "start": "webpack && node server.js",
-    "build": "webpack",    
+    "build": "webpack",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn build -w --mode development\" \"yarn server\""
+    "dev": "npm-run-all --parallel server \"build -w\""
   },
   "babel": {
     "presets": [

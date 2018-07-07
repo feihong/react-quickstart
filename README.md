@@ -8,14 +8,14 @@ The `package.json` file contains extra scripts to help you develop your app loca
 
 ## Prerequisites for local development
 
-    yarn global add nodemon concurrently
+    yarn global add nodemon npm-run-all
     yarn install
 
 ## Scripts
 
 Build the client source and start the server (only used on Glitch)
 
-    yarn start
+    npm start
 
 Run in dev mode, meaning when you change files the server reloads automatically and the client source is recompiled
 
