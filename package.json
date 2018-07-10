@@ -1,7 +1,7 @@
 {
-  "name": "hello-react",
+  "name": "starter-react-babel",
   "version": "0.1.0",
-  "license": "Apache",
+  "license": "MIT",
   "engines": {
     "node": "10.x"
   },
