@@ -13,7 +13,7 @@ The `package.json` file contains extra scripts to help you develop your app loca
 
 ## Scripts
 
-Build the client source and start the server (only used on Glitch)
+Build the client source and start the server. This is only used on Glitch, where yarn is not used.
 
     npm start
 
